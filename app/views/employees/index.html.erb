@@ -1,0 +1,26 @@
+<h1>List of Employees</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>PictureUrl</th>
+    <th></th>
+
+  </tr>
+
+  <% @employees.each do |employee| %>
+    <tr>
+      <td><%= employee.id %></td>
+      <td><%= employee.name %></td>
+      <td><%= employee.surname %></td>
+      <td><%= employee.phone %></td>
+      <td><%= employee.email %></td>
+      <td><%= employee.pictureUrl %></td>
+      <td><%= link_to 'Show', employee_path(employee) %></td>
+    </tr>
+  <% end %>
+</table>
